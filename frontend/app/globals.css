@@ -1,0 +1,637 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Shine Bubble';
+  src: url('/fonts/shine-bubble.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'poppins';
+  src: url('/fonts/Poppins-Regular') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'poppins';
+  src: url('/fonts/Poppins-Medium') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'poppins';
+  src: url('/fonts/Poppins-SemiBold') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'poppins';
+  src: url('/fonts/Poppins-Bold') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --text-muted: #777777;
+  --primary: #1b66d0;
+  --grey: #ADADAD;
+  --secondary: #c13194;
+  --accent: #60ae74;
+  --text-on-brand: #ffffff;
+  --para-color: #6e6f89;
+  --font-dmsans: 'DM Sans', sans-serif;
+
+  /* Product category circle hover fill — set per row via --product-circle-hover-solid (Why Choose Us palette) */
+
+  /* Packages tabs: active fill + animated sheen (linear-gradient) */
+  --packages-tab-active-gradient: linear-gradient(
+    125deg,
+    color-mix(in srgb, var(--primary) 50%, #0a3a8c) 0%,
+    var(--primary) 35%,
+    color-mix(in srgb, var(--primary) 65%, var(--secondary)) 62%,
+    color-mix(in srgb, var(--accent) 40%, var(--primary)) 100%
+  );
+  --packages-tab-sheen-idle: linear-gradient(
+    105deg,
+    transparent 0%,
+    color-mix(in srgb, var(--primary) 35%, transparent) 20%,
+    color-mix(in srgb, var(--accent) 45%, white) 42%,
+    rgba(255, 255, 255, 0.5) 50%,
+    color-mix(in srgb, var(--secondary) 40%, white) 58%,
+    color-mix(in srgb, var(--primary) 30%, transparent) 80%,
+    transparent 100%
+  );
+  --packages-tab-sheen-active: linear-gradient(
+    105deg,
+    transparent 0%,
+    color-mix(in srgb, var(--accent) 60%, white) 28%,
+    rgba(255, 255, 255, 0.82) 48%,
+    color-mix(in srgb, var(--secondary) 55%, white) 58%,
+    color-mix(in srgb, var(--primary) 45%, white) 78%,
+    transparent 100%
+  );
+
+  /* Hero overlay — tweak or paste from Figma (node hero frame fill) */
+  --hero-overlay-a: rgba(10, 38, 108, 0.93);
+  --hero-overlay-b: rgba(22, 72, 188, 0.84);
+  --hero-overlay-c: rgba(12, 48, 132, 0.9);
+  --hero-overlay-d: rgba(6, 26, 78, 0.95);
+
+  --font-sans-fallback: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono-fallback: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+    monospace;
+  /* Single site font — body, Tailwind font-sans, and .font-shine-bubble all use this */
+  --font-shine-bubble: "Shine Bubble", "poppins", sans-serif;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-text-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-text-on-brand: var(--text-on-brand);
+  --font-sans: var(--font-shine-bubble);
+  --font-mono: var(--font-mono-fallback);
+  --color-para-color: var(--para-color);
+  --font-dmsans: var(--font-dmsans);
+}
+
+/* @media (prefers-color-scheme: dark) { */
+  :root {
+    --background: #0a0a0a;
+    --default-theme: #fff;
+    --text-muted: #a3a3a3;
+    
+  }
+/* } */
+
+/* import poppins font here by impot from google fonts */
+
+
+.font-shine-bubble {
+  font-family: var(--font-shine-bubble);
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-shine-bubble);
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Home product section: category circle — solid brand color on hover (matches .wcu-circle-wrapper:hover) */
+.product-sec-circle-wrapper {
+  transition:
+    background 0.5s ease,
+    box-shadow 0.5s ease,
+    border-color 0.45s ease,
+    transform 0.5s ease;
+}
+
+/* .product-sec-circle-wrapper:hover {
+  background: var(--product-circle-hover-solid, var(--primary)) !important;
+  box-shadow:
+    0 0 28px rgba(255, 255, 255, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.88);
+} */
+
+/* Hero: richer blue wash (closer to typical Figma hero treatment) */
+.hero-banner-overlay {
+  background:
+    linear-gradient(195deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      transparent 28%),
+    linear-gradient(148deg,
+      var(--hero-overlay-a) 0%,
+      var(--hero-overlay-b) 38%,
+      var(--hero-overlay-c) 68%,
+      var(--hero-overlay-d) 100%);
+}
+
+.hero-blobs {
+  background:
+    radial-gradient(ellipse 82% 58% at 10% 76%,
+      rgba(4, 24, 72, 0.5) 0%,
+      transparent 56%),
+    radial-gradient(ellipse 68% 52% at 90% 18%,
+      rgba(58, 75, 119, 0.42) 0%,
+      transparent 52%),
+    radial-gradient(ellipse 58% 48% at 52% 98%,
+      rgba(8, 32, 96, 0.38) 0%,
+      transparent 48%);
+}
+
+
+
+/* Hero: floating cloud video frames (SVG clip-path + soft depth) */
+@keyframes hero-cloud-float-l {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-5deg);
+  }
+
+  50% {
+    transform: translate3d(6px, -14px, 0) rotate(-2deg);
+  }
+}
+
+@keyframes hero-cloud-float-r {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(7deg);
+  }
+
+  50% {
+    transform: translate3d(-8px, -12px, 0) rotate(4deg);
+  }
+}
+
+@keyframes hero-cloud-shimmer {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.hero-cloud-row {
+  position: relative;
+}
+
+/* .hero-cloud-pack {
+  position: relative;
+  isolation: isolate;
+  transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+} */
+
+
+
+
+/* .hero-cloud-shell {
+  position: relative;
+  aspect-ratio: 3 / 5;
+  width: 100%;
+  overflow: hidden;
+} */
+
+/* .hero-cloud-shell::before {
+  content: "";
+  position: absolute;
+  inset: -18%;
+  z-index: 0;
+  pointer-events: none;
+} */
+
+/* .hero-cloud-video-wrap {
+  position: absolute;
+  inset: 5px;
+  z-index: 1;
+  overflow: hidden;
+} */
+
+.hero-cloud-video {
+  position: absolute;
+  inset: -4%;
+  width: 108%;
+  height: 108%;
+  object-fit: cover;
+  transform: scale(1.02);
+  filter: saturate(1.06) contrast(1.03);
+}
+
+@media (min-width: 1024px) {
+  /* .hero-cloud-shell::before {
+    inset: -22%;
+    filter: blur(22px);
+  } */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* .hero-cloud-pack--left,
+  .hero-cloud-pack--right {
+    animation: none;
+    filter:
+      drop-shadow(0 20px 40px rgba(0, 0, 0, 0.28))
+      drop-shadow(0 0 1px rgba(255, 255, 255, 0.55));
+  }
+
+  .hero-cloud-shell::before {
+    animation: none;
+    opacity: 0.65;
+  } */
+}
+
+.hero-center-logo {
+  transform: translateY(-20px);
+}
+
+@media (min-width: 768px) {
+  .hero-center-logo {
+    transform: translateY(-36px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-center-logo {
+    transform: translateY(-52px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-center-logo {
+    transform: translateY(-64px);
+  }
+}
+
+.banner-text {
+  @apply ml-auto max-w-[700px] text-[30px] font-bold uppercase leading-[1.15] tracking-wide text-white md:max-w-[700px] md:text-[56px];
+}
+
+/* Book Now: hover pe accent bottom-right se dheere fill */
+.book-now-btn {
+  isolation: isolate;
+  overflow: hidden;
+  background-color: var(--secondary);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.book-now-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-color: var(--accent);
+  transform-origin: 100% 100%;
+  transform: scale(0);
+  transition: transform 0.65s cubic-bezier(0.33, 1, 0.68, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.book-now-btn:hover::before,
+.book-now-btn:focus-visible::before {
+  transform: scale(1);
+}
+
+.book-now-btn>span {
+  position: relative;
+  z-index: 1;
+}
+
+.book-button {
+  @apply absolute left-1/2 top-[40%] z-10 flex h-[100px] w-[100px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center rounded-full text-center text-[16px] font-bold uppercase leading-[1.15] text-white  hover:scale-[1.04];
+}
+
+/* Full-screen nav: matches hero blues + brand magenta lift */
+.site-header-panel-bg {
+  background:
+    radial-gradient(ellipse 85% 55% at 100% 8%,
+      rgba(193, 49, 148, 0.2) 0%,
+      transparent 52%),
+    radial-gradient(ellipse 70% 50% at 0% 100%,
+      rgba(96, 174, 116, 0.14) 0%,
+      transparent 50%),
+    linear-gradient(148deg,
+      var(--hero-overlay-a) 0%,
+      var(--hero-overlay-b) 38%,
+      var(--hero-overlay-c) 68%,
+      var(--hero-overlay-d) 100%);
+}
+
+.site-header-panel-blobs {
+  background:
+    radial-gradient(ellipse 82% 58% at 10% 76%,
+      rgba(4, 24, 72, 0.45) 0%,
+      transparent 56%),
+    radial-gradient(ellipse 68% 52% at 90% 18%,
+      rgba(18, 52, 140, 0.38) 0%,
+      transparent 52%),
+    radial-gradient(ellipse 58% 48% at 52% 98%,
+      rgba(8, 32, 96, 0.3) 0%,
+      transparent 48%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-now-btn::before {
+    transition-duration: 0.01ms;
+  }
+
+  .site-header-backdrop,
+  .site-header-panel,
+  .site-header-link {
+    transition-duration: 0.01ms !important;
+  }
+
+  .site-header-link,
+  .site-header-book-cta {
+    transition-delay: 0ms !important;
+  }
+
+  .home-slider-marquee-track {
+    animation: none !important;
+  }
+
+  .packages-page-tabs__btn,
+  .packages-page-tabs__btn::after {
+    animation: none !important;
+  }
+
+  .product-sec-circle-wrapper {
+    transition-duration: 0.01ms;
+  }
+}
+
+/* Home: infinite horizontal image strip */
+@keyframes home-slider-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+.book-now-input {
+  @apply w-full rounded-[12px] border-2 border-[var(--primary)] bg-white px-[16px] py-[14px] text-[15px] text-primary outline-none placeholder:text-[#0d1b4d]/40 focus:ring-2 focus:ring-[var(--primary)]/30 md:py-[16px] md:text-[16px];
+}
+
+/*
+  Native date inputs don’t use ::placeholder like text fields; empty UI (e.g. mm/dd/yyyy)
+  was picking up full primary color. Empty + required => :invalid so we can match text placeholders.
+*/
+.book-now-input[type="date"]:invalid {
+  color: rgb(13 27 77 / 0.4);
+}
+
+.book-now-input[type="date"]:invalid::-webkit-datetime-edit,
+.book-now-input[type="date"]:invalid::-webkit-datetime-edit-fields-wrapper,
+.book-now-input[type="date"]:invalid::-webkit-datetime-edit-text,
+.book-now-input[type="date"]:invalid::-webkit-datetime-edit-year-field,
+.book-now-input[type="date"]:invalid::-webkit-datetime-edit-month-field,
+.book-now-input[type="date"]:invalid::-webkit-datetime-edit-day-field {
+  color: rgb(13 27 77 / 0.4);
+  -webkit-text-fill-color: rgb(13 27 77 / 0.4);
+}
+
+.book-now-input[type="date"]:valid {
+  color: var(--primary);
+}
+
+.book-now-input[type="date"]:valid::-webkit-datetime-edit,
+.book-now-input[type="date"]:valid::-webkit-datetime-edit-fields-wrapper,
+.book-now-input[type="date"]:valid::-webkit-datetime-edit-text,
+.book-now-input[type="date"]:valid::-webkit-datetime-edit-year-field,
+.book-now-input[type="date"]:valid::-webkit-datetime-edit-month-field,
+.book-now-input[type="date"]:valid::-webkit-datetime-edit-day-field {
+  color: var(--primary);
+  -webkit-text-fill-color: var(--primary);
+}
+
+.book-now-input[type="date"]:invalid::-webkit-calendar-picker-indicator {
+  opacity: 0.45;
+}
+
+.book-now-input[type="date"]:valid::-webkit-calendar-picker-indicator {
+  opacity: 1;
+}
+
+.book-now-label {
+  @apply mb-[8px] block text-[11px] font-bold uppercase tracking-[0.2em] text-primary sm:text-[12px];
+}
+
+/* Ice cream cone art: far-right column on lg+ (form | aside | logo); compact size */
+.book-now-cone {
+  @apply flex;
+}
+
+.book-now-cone__img {
+  @apply h-auto w-auto max-w-[140px] sm:max-w-[160px] md:max-w-[180px];
+}
+
+/* Book Now — falling orbs (Booknowpageballs.tsx) */
+@keyframes book-now-ball-fall {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.5;
+  }
+
+  12% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(var(--ball-drift, 0), calc(100dvh + min(40%, 420px)), 0)
+      scale(0.88);
+    opacity: 0.28;
+  }
+}
+
+.book-now-falling-balls__ball {
+  animation: book-now-ball-fall linear infinite;
+  will-change: transform;
+  opacity: 0.72;
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--primary) 18%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .book-now-falling-balls {
+    visibility: hidden;
+  }
+}
+
+/* Packages page: tab pills — continuous motion (shimmer + soft float) */
+@keyframes packages-tab-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes packages-tab-shimmer {
+  0% {
+    transform: translateX(-130%) skewX(-12deg);
+  }
+
+  100% {
+    transform: translateX(230%) skewX(-12deg);
+  }
+}
+
+@keyframes packages-tab-gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes packages-tab-ring-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 color-mix(in srgb, var(--primary) 0%, transparent),
+      0 4px 14px rgba(0, 0, 0, 0.06);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 6px color-mix(in srgb, var(--primary) 20%, transparent),
+      0 6px 22px color-mix(in srgb, var(--secondary) 14%, transparent);
+  }
+}
+
+@keyframes packages-tab-ring-pulse-active {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent),
+      0 4px 18px color-mix(in srgb, var(--primary) 30%, transparent);
+  }
+
+  50% {
+    box-shadow:
+      0 0 0 8px color-mix(in srgb, var(--secondary) 18%, transparent),
+      0 8px 26px color-mix(in srgb, var(--primary) 35%, transparent);
+  }
+}
+
+.packages-page-tabs__btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  animation:
+    packages-tab-float 4.2s ease-in-out infinite,
+    packages-tab-ring-pulse 3s ease-in-out infinite;
+  animation-delay:
+    calc(var(--packages-tab-stagger, 0) * 0.45s),
+    calc(var(--packages-tab-stagger, 0) * 0.35s);
+}
+
+.packages-page-tabs__btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 52%;
+  margin-inline: auto;
+  background: var(--packages-tab-sheen-idle);
+  background-size: 260% 100%;
+  background-position: 0% 50%;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+  animation:
+    packages-tab-shimmer 3.8s ease-in-out infinite,
+    packages-tab-gradient-flow 5.5s ease-in-out infinite;
+  animation-delay:
+    calc(var(--packages-tab-stagger, 0) * 0.65s),
+    calc(var(--packages-tab-stagger, 0) * 0.4s);
+}
+
+.packages-page-tabs__btn[aria-selected="true"]::after {
+  background: var(--packages-tab-sheen-active);
+  background-size: 280% 100%;
+  background-position: 0% 50%;
+  width: 56%;
+  opacity: 0.9;
+  animation:
+    packages-tab-shimmer 3.2s ease-in-out infinite,
+    packages-tab-gradient-flow 4.8s ease-in-out infinite;
+  animation-delay:
+    calc(var(--packages-tab-stagger, 0) * 0.65s),
+    calc(var(--packages-tab-stagger, 0) * 0.4s);
+}
+
+.packages-page-tabs__btn[aria-selected="true"] {
+  background: var(--packages-tab-active-gradient) !important;
+  background-size: 200% 100%;
+  background-position: 0% 50%;
+  color: var(--text-on-brand) !important;
+  border-color: transparent !important;
+  animation:
+    packages-tab-float 4.2s ease-in-out infinite,
+    packages-tab-ring-pulse-active 3s ease-in-out infinite,
+    packages-tab-gradient-flow 7s ease-in-out infinite;
+  animation-delay:
+    calc(var(--packages-tab-stagger, 0) * 0.45s),
+    calc(var(--packages-tab-stagger, 0) * 0.35s),
+    calc(var(--packages-tab-stagger, 0) * 0.2s);
+}
+
+.packages-page-tabs__btn__label {
+  position: relative;
+  z-index: 1;
+} 
+
+p {
+  font-family: var(--font-dmsans);
+}

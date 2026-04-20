@@ -1,0 +1,34 @@
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+
+export default defineConfig({
+    plugins: [
+        laravel({
+            input: ['resources/css/app.css', 'resources/js/app.jsx'],
+            refresh: true,
+        }),
+        react(),
+        tailwindcss(),
+    ],
+    server: {
+        watch: {
+            ignored: ['**/storage/framework/views/**'],
+        },
+    },
+    build: {
+        rollupOptions: {
+            output: {
+                // Single vendor chunk to avoid circular chunk dependencies (react-dom ↔ react-vendor ↔ vendor)
+                manualChunks(id) {
+                    if (id.includes('node_modules')) {
+                        return 'vendor';
+                    }
+                },
+            },
+        },
+        chunkSizeWarningLimit: 900,
+    },
+    //merge
+});
