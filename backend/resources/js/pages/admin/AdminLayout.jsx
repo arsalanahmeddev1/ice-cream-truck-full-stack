@@ -347,14 +347,14 @@ export default function AdminLayout() {
               )}
             </button>
             <h1 className="text-lg font-semibold text-stone-900">{pageTitle}</h1>
-            <Link
-              to="/"
+            <a
+              href={(import.meta.env.VITE_FRONTEND_URL || 'http://localhost:3000').replace(/\/+$/, '')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-amber-600 hover:bg-amber-50"
             >
               View site →
-            </Link>
+            </a>
           </div>
 
           <div className="relative">

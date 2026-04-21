@@ -24,6 +24,7 @@ Route::get('/{any}', function (?string $any = null) {
     $allowedFirstSegments = [
         'admin',
         'driver',
+        'book',
         'build',
         'storage',
         'sanctum',

@@ -1,6 +1,8 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import Booking from './pages/Booking';
+import BookingConfirm from './pages/BookingConfirm';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -44,6 +46,9 @@ function RequireDriverAuth({ children }) {
 export default function App() {
   return (
     <Routes>
+      {/* Legacy booking + Stripe return URL (not marketing home) */}
+      <Route path="/book" element={<Booking />} />
+      <Route path="/book/confirm/:uuid" element={<BookingConfirm />} />
       <Route path="/admin" element={<RequireAuth><AdminLayout /></RequireAuth>}>
         <Route index element={<AdminDashboard />} />
         <Route path="bookings" element={<AdminBookings />} />
