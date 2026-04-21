@@ -1,13 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import Layout from './components/Layout';
-import Home from './pages/Home';
-import Pricing from './pages/Pricing';
-import Packages from './pages/Packages';
-import FAQs from './pages/FAQs';
-import Booking from './pages/Booking';
-import BookingConfirm from './pages/BookingConfirm';
 import AdminLayout from './pages/admin/AdminLayout';
 import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
@@ -51,14 +44,6 @@ function RequireDriverAuth({ children }) {
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home />} />
-        <Route path="pricing" element={<Pricing />} />
-        <Route path="packages" element={<Packages />} />
-        <Route path="faqs" element={<FAQs />} />
-        <Route path="book" element={<Booking />} />
-        <Route path="book/confirm/:uuid" element={<BookingConfirm />} />
-      </Route>
       <Route path="/admin" element={<RequireAuth><AdminLayout /></RequireAuth>}>
         <Route index element={<AdminDashboard />} />
         <Route path="bookings" element={<AdminBookings />} />
@@ -80,6 +65,8 @@ export default function App() {
         <Route path="bookings/:id" element={<DriverBookingDetail />} />
         <Route path="profile" element={<DriverProfile />} />
       </Route>
+      <Route path="/" element={<Navigate to="/admin" replace />} />
+      <Route path="*" element={<Navigate to="/admin" replace />} />
     </Routes>
   );
 }

@@ -15,6 +15,7 @@ return [
         'http://localhost:8000',
         'http://127.0.0.1:8000',
         'https://myicecreamtruck.sitestaginglink.com',
+        'https://icecreamtruck.sitestaginglink.com',
     ],
 
     'allowed_origins_patterns' => [],
