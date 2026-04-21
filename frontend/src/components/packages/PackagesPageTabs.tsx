@@ -5,6 +5,7 @@ import { FaCheck } from "react-icons/fa";
 import { cn } from "@/src/lib/utils";
 import Link from "next/link";
 import { MulticolorH2 } from "@/src/components/ui/MulticolorH2";
+import StepsForm from "../home/stepsform";
 
 
 type ThemeClass = "package-card--basic" | "package-card--standard" | "package-card--premium";
@@ -115,6 +116,7 @@ function PackageCard({ pkg }: { pkg: EventPackage }) {
 }
 
 export default function PackagesPageTabs() {
+  const [stepsOpen, setStepsOpen] = useState(false);
   const [active, setActive] = useState<(typeof TABS)[number]["id"]>("limited");
 
 
@@ -218,11 +220,12 @@ export default function PackagesPageTabs() {
             </p>
             <button
               type="button"
-              className="btn btn-secondary uppercase"
-             
+              className="btn cursor-pointer btn-secondary uppercase"
+              onClick={() => setStepsOpen(true)}
             >
-              Request a quote
+              Book Your Event
             </button>
+              <StepsForm open={stepsOpen} onClose={() => setStepsOpen(false)} />
           </div>
         </div>
       )}

@@ -31,13 +31,47 @@ export type StepFormSnapshot = {
   quotedEventBasePrice: string;
 };
 
+function stripTrailingSlashes(url: string): string {
+  return url.replace(/\/+$/, "");
+}
+
+/** If `url` is only an origin (e.g. http://localhost:8000), append `/api/v1`. */
+function ensureEndsWithApiV1(url: string): string {
+  const u = stripTrailingSlashes(url.trim());
+  if (/\/api\/v1$/i.test(u)) return u;
+  return `${u}/api/v1`;
+}
+
+/**
+ * Laravel public API base (`…/api/v1`), from env (build-time) with a small dev fallback.
+ *
+ * **Set one of these in `.env.local` (or deployment env):**
+ * - `NEXT_PUBLIC_API_URL` — full base, e.g. `https://api.example.com/api/v1` or `http://localhost:8000/api/v1`
+ * - `NEXT_PUBLIC_LARAVEL_URL` or `NEXT_PUBLIC_BACKEND_URL` — origin only, e.g. `http://localhost:8000` → `…/api/v1`
+ */
+// export function getPublicBookingApiBase(): string {
+//   const apiUrl = process.env.NEXT_PUBLIC_API_URL?.trim();
+//   if (apiUrl) return ensureEndsWithApiV1(apiUrl);
+
+//   const backendOrigin =
+//     process.env.NEXT_PUBLIC_LARAVEL_URL?.trim() ||
+//     process.env.NEXT_PUBLIC_BACKEND_URL?.trim();
+//   if (backendOrigin) return ensureEndsWithApiV1(backendOrigin);
+
+//   if (typeof window !== "undefined" && window.location?.hostname) {
+//     return `${window.location.protocol}//127.0.0.1:8000/api/v1`;
+//   }
+//   return "http://127.0.0.1:8000/api/v1";
+// }
+
 export function getPublicBookingApiBase(): string {
-  const env = process.env.NEXT_PUBLIC_API_URL?.trim();
-  if (env) return env.replace(/\/$/, "");
-  if (typeof window !== "undefined" && window.location?.hostname) {
-    return `${window.location.protocol}//127.0.0.1:8000/api/v1`;
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL?.trim();
+
+  if (!apiUrl) {
+    throw new Error("NEXT_PUBLIC_API_URL is missing");
   }
-  return "http://127.0.0.1:8000/api/v1";
+
+  return apiUrl;
 }
 
 /** "11:30 PM" -> "23:30" for Laravel `date_format:H:i` */
