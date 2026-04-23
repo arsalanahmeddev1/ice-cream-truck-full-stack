@@ -675,6 +675,6 @@ p {
     transform: scale3d(1.1,1.1,1) rotateZ(-2deg);
   }
 } */
-/* .site-initial-preloader {
-  background-color: #000;
-} */
+.site-initial-preloader {
+  background-color: #2294F2;
+}

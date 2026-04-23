@@ -2,17 +2,17 @@
 
 import { useEffect, useState } from "react";
 
-/**
- * Full document load / reload par ek baar overlay; client-side route change par dubara mount nahi hota,
- * isliye ye phir show nahi hota. Styling: `.site-initial-preloader` / `__inner` (globals ya style.css).
- */
 export function SiteInitialPreloader() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
+    const MIN_TIME = 1200; // 👈 minimum loader time (ms)
+    const startTime = Date.now();
+
     const html = document.documentElement;
     const prevBodyOverflow = document.body.style.overflow;
     const prevHtmlOverflow = html.style.overflow;
+
     document.body.style.overflow = "hidden";
     html.style.overflow = "hidden";
 
@@ -22,18 +22,21 @@ export function SiteInitialPreloader() {
     };
 
     const finish = () => {
-      releaseScroll();
-      setVisible(false);
+      const elapsed = Date.now() - startTime;
+      const remaining = Math.max(MIN_TIME - elapsed, 0);
+
+      setTimeout(() => {
+        releaseScroll();
+        setVisible(false);
+      }, remaining);
     };
 
     if (document.readyState === "complete") {
       finish();
-      return () => {
-        releaseScroll();
-      };
+    } else {
+      window.addEventListener("load", finish, { once: true });
     }
 
-    window.addEventListener("load", finish, { once: true });
     return () => {
       window.removeEventListener("load", finish);
       releaseScroll();
@@ -43,15 +46,13 @@ export function SiteInitialPreloader() {
   if (!visible) return null;
 
   return (
-    <div
-      id="site-initial-preloader"
-      className="site-initial-preloader pointer-events-auto fixed inset-0 z-[99999]"
-      role="status"
-      aria-live="polite"
-      aria-busy="true"
-    >
-      <span className="sr-only">Loading</span>
-      <div className="site-initial-preloader__inner" aria-hidden />
+    <div className="site-initial-preloader fixed inset-0 z-[99999] flex items-center justify-center">
+      <span className="text-white text-center text-[26px] max-w-[290px]">
+        We give people
+        something
+        to look forward to.
+      </span>
+      {/* <div className="site-initial-preloader__inner" /> */}
     </div>
   );
 }

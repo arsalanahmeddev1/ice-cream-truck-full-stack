@@ -358,7 +358,7 @@ function CategoryProductGrid({
               >
                 {sub.name}
               </MulticolorH2> */}
-              <h2>{sub.name}</h2>
+              <h2 className="capitalize">{sub.name}</h2>
             </div>
           ))}
         </div>
