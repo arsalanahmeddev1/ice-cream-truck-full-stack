@@ -189,9 +189,9 @@ const products = [
     bgColor: "var(--primary)",
     circleHoverBg: "var(--secondary)",
     subItems: [
-      { name: "novelties 01", image: novelties01 },
-      { name: "novelties 02", image: novelties02 },
-      { name: "novelties 03", image: novelties03 },
+      { name: "chocolate cup", image: novelties01 },
+      { name: "vanila cup", image: novelties02 },
+      { name: "banana boat", image: novelties03 },
     ],
   },
 ];
@@ -242,9 +242,9 @@ const limitedment = [
     bgColor: "var(--primary)",
     circleHoverBg: "var(--secondary)",
     subItems: [
-      { name: "novelties 01", image: novelties01 },
-      { name: "novelties 02", image: novelties02 },
-      { name: "novelties 03", image: novelties03 },
+      { name: "chocolate cup", image: novelties01 },
+      { name: "vanila cup", image: novelties02 },
+      { name: "banana boat", image: novelties03 },
     ],
   },
 ];
