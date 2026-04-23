@@ -269,7 +269,7 @@ function CategoryTabRow({
 }) {
   return (
     <div
-      className="mb-4 flex w-full max-w-full flex-nowrap items-stretch justify-start gap-1 overflow-x-auto pb-2 [scrollbar-width:thin] sm:mb-6 sm:justify-center sm:gap-2 md:gap-3"
+      className="mb-4 pt-[35px] flex w-full max-w-full flex-nowrap items-stretch justify-start gap-1 overflow-x-auto pb-2 [scrollbar-width:thin] sm:mb-6 sm:justify-center sm:gap-2 md:gap-3"
       role="tablist"
       aria-label={ariaLabel}
     >
@@ -282,12 +282,19 @@ function CategoryTabRow({
             role="tab"
             aria-selected={isActive}
             onClick={() => onSelect(index)}
-            className={`flex min-w-0 shrink-0 justify-center items-center border-1 rounded-xl w-[60px] h-[60px] text-center transition-all ${
+            className={`flex min-w-0 shrink-0 justify-center items-center border-1 rounded-xl w-[60px] h-[60px] text-center transition-all
+              group relative z-10
+              ${
               isActive
                 ? "bg-primary opacity-100 shadow-sm border-transparent"
                 : "opacity-80 hover:opacity-100 border-white/50"
             }`}
           >
+             <span
+      className="pointer-events-none absolute opacity-0 group-hover:opacity-100 text-white whitespace-nowrap group-hover:text-sm group-hover:-translate-y-[50px] duration-700"
+    >
+      {product.title}
+    </span>
             <motion.img
               src={product.icon.src}
               alt=""

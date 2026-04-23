@@ -56,7 +56,7 @@ export default function RootLayout({
         className="flex min-h-full flex-col"
         suppressHydrationWarning
       >
-        {/* <SiteInitialPreloader /> */}
+        <SiteInitialPreloader />
         <ScrollToHash />
         <SiteHeader />
         <FixedBookNowLogo />
