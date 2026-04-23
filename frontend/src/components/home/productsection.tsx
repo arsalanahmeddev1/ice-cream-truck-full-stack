@@ -242,6 +242,9 @@ const limitedment = [
     bgColor: "var(--primary)",
     circleHoverBg: "var(--secondary)",
     subItems: [
+      { name: "novelties 01", image: novelties01 },
+      { name: "novelties 02", image: novelties02 },
+      { name: "novelties 03", image: novelties03 },
     ],
   },
 ];
