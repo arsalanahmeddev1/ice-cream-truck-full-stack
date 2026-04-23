@@ -2,9 +2,12 @@
 
 import { useState } from "react";
 import { FaCheck } from "react-icons/fa";
-import Link from "next/link";
 import { MulticolorH2 } from "@/src/components/ui/MulticolorH2";
 import StepsForm from "@/src/components/home/stepsform";
+import PackageBookingPaymentModal, {
+  packageThemeFromClass,
+  type PackageBookingSelection,
+} from "@/src/components/packages/PackageBookingPaymentModal";
 
 
 type PackageItem = {
@@ -61,6 +64,8 @@ const PACKAGES: PackageItem[] = [
 
 export default function Packages() {
     const [stepsOpen, setStepsOpen] = useState(false);
+    const [bookModal, setBookModal] = useState<PackageBookingSelection | null>(null);
+
     return (
         <section className="packages-sec">
             <div className="container">
@@ -87,7 +92,19 @@ export default function Packages() {
                                     <li className="flex items-center gap-x-[10px] shrink-0"  key={feature}><div className="pkg-icon-wrapper"><FaCheck  size={10} /></div> {feature}</li>
                                 ))}
                             </ul>
-                            <Link href="/book-now" className="uppercase btn btn-secondary">BOOK YOUR EVENT</Link>
+                            <button
+                                type="button"
+                                className="uppercase btn btn-secondary w-full text-center"
+                                onClick={() =>
+                                    setBookModal({
+                                        name: pkg.name,
+                                        price: pkg.price,
+                                        theme: packageThemeFromClass(pkg.themeClass),
+                                    })
+                                }
+                            >
+                                BOOK YOUR EVENT
+                            </button>
                         </div>
                     ))}
                 </div>
@@ -102,8 +119,12 @@ export default function Packages() {
                     </button>
                 </div>
                 <StepsForm open={stepsOpen} onClose={() => setStepsOpen(false)} />
+                <PackageBookingPaymentModal
+                    open={bookModal !== null}
+                    selection={bookModal}
+                    onClose={() => setBookModal(null)}
+                />
             </div>
         </section>
-    )
-
+    );
 }

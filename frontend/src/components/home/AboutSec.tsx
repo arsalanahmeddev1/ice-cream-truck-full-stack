@@ -122,19 +122,22 @@ export default function AboutSec() {
             >
               About US
             </MulticolorH2>
-            <p className="text-[20px] pb-[20px] font-dmsans text-white ">
+            <p className="text-[16px] pb-[20px] text-white ">
               Since 1998, My Ice Cream Truck has been proudly serving communities with a timeless ice cream truck experience built on quality, reliability, and tradition. What started as a single neighborhood truck has grown into a trusted multi-unit operation, providing professional ice cream catering services for schools, private parties, corporate events, weddings, and community celebrations.
             </p>
-            <p className="text-[20px] pb-[30px] font-dmsans text-white ">
+            <p className="text-[16px] pb-[30px] text-white ">
             We take pride in preserving the nostalgic charm of the classic ice cream truck while delivering a seamless and dependable service that event planners, PTOs, and organizations can count on. Our team is fully licensed, insured, and committed to creating memorable experiences through friendly service and premium frozen treats.
             </p>
             <button
               type="button"
-              className="btn btn-primary uppercase packages-page-tabs__btn"
+              className="btn btn-primary uppercase packages-page-tabs__btn "
    
             >
               <span className="packages-page-tabs__btn__label">Learn MOre</span>
             </button>
+            {/* <button className="animated-btn">
+                Learn More
+            </button> */}
           </div>
           <div className="about-sec-right">
               {/* <div className="about-sec-md-card">

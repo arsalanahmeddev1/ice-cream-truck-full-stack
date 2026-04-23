@@ -40,12 +40,12 @@ const MenuSection = () => {
                 >
                     OUR MENUS
                 </MulticolorH2>
-<p className='hill-clean-para max-w-[700px] mx-auto mb-10 text-center '>THE FOLLOWING OUTLINES THE PRECAUTIONS WE TAKE FOR COMMON ALLERGENS AND WHICH ALLERGENS MAY BE PRESENT ON OUR TRUCK. PLEASE REFER TO OUR MENU FOR ADDITIONAL DETAILS.</p>
+                <p className='hill-clean-para max-w-[700px] mx-auto mb-10 text-center '>THE FOLLOWING OUTLINES THE PRECAUTIONS WE TAKE FOR COMMON ALLERGENS AND WHICH ALLERGENS MAY BE PRESENT ON OUR TRUCK. PLEASE REFER TO OUR MENU FOR ADDITIONAL DETAILS.</p>
                 {/* Allergy Key Container */}
                 <div className="max-w-6xl mx-auto">
                     {isOpen ? (
                         /* Open State */
-                        <div 
+                        <div
                             onClick={() => setIsOpen(false)}
                             className="our-menu-toggle-card-wrapper relative bg-primary rounded-lg px-4 md:px-6 py-3 md:py-4 flex flex-col md:flex-row items-center justify-between shadow-lg transition-all duration-300 gap-4 md:gap-0 cursor-pointer"
                         >
@@ -84,7 +84,7 @@ const MenuSection = () => {
                         </div>
                     ) : (
                         /* Closed State */
-                        <div 
+                        <div
                             onClick={() => setIsOpen(true)}
                             className="flex items-center justify-center gap-4 transition-all duration-300 py-2 cursor-pointer"
                         >

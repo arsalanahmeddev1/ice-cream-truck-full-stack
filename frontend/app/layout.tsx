@@ -3,6 +3,7 @@ import { FixedBookNowLogo } from "@/src/components/layout/FixedBookNowLogo";
 import { SiteFooter } from "@/src/components/layout/Footer";
 import { SiteHeader } from "@/src/components/layout/Header";
 import { ScrollToHash } from "@/src/components/layout/ScrollToHash";
+import { SiteInitialPreloader } from "@/src/components/layout/SiteInitialPreloader";
 import { site } from "@/src/lib/constants";
 import "./globals.css";
 import "./style.css";
@@ -45,13 +46,17 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>)
+
+{
+  
   return (
     <html lang="en" className={`h-full antialiased ${dmsans.className}`} suppressHydrationWarning>
       <body
         className="flex min-h-full flex-col"
         suppressHydrationWarning
       >
+        <SiteInitialPreloader />
         <ScrollToHash />
         <SiteHeader />
         <FixedBookNowLogo />

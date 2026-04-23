@@ -199,12 +199,12 @@ export function HeroExpandableVideoRow({
               className="font-shine-bubble pointer-events-none absolute left-1/2 top-1/2 z-[2] flex -translate-x-1/2 -translate-y-1/2 flex-col items-center text-center text-[42px] font-bold uppercase leading-[1] tracking-[-0.02em] text-white/45 sm:text-[54px] md:text-[66px] lg:text-[78px] xl:text-[90px]"
               aria-hidden
             >
-              <span className="block">MR</span>
+              <span className="block">MY</span>
               <span className="block">TRUCK</span>
               <span className="block">ICE</span>
               <span className="block">CREAM</span>
             </div>
-            <span className="sr-only">Mr Truck Ice Cream</span>
+            <span className="sr-only">MY Truck Ice Cream</span>
             <button
               type="button"
               className="absolute right-[16px] top-[16px] z-[3] rounded-full p-[2px] transition-opacity hover:opacity-90 md:right-[24px] md:top-[24px]"

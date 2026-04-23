@@ -413,7 +413,7 @@ export function MulticolorH2({
 }: MulticolorH2Props) {
   const Tag = as;
   return (
-    <Tag className={cn(className)} {...props}>
+    <Tag className={cn(className, "uppercase")} {...props}>
       {renderMulticolorText(
         children,
         sectionBackground,

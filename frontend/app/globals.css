@@ -633,5 +633,45 @@ body {
 } 
 
 p {
-  font-family: var(--font-dmsans);
+  /* font-family: var(--font-dmsans); */
+  font-size: 15px !important;
 }
+/* .animated-btn {
+  transform-style: preserve-3d;
+  display: inline-block;
+}
+
+.animated-btn:hover {
+  animation: btnSequence 2s ease forwards,
+             jerkRotate 2s steps(4) 0.8s infinite;
+}
+
+@keyframes btnSequence {
+  0% {
+    transform: scale3d(1,1,1) rotateZ(0deg);
+  }
+
+  40% {
+    transform: scale3d(1.08,1.08,1) rotateZ(-2deg);
+  }
+
+  70% {
+    transform: scale3d(1.13,1.13,1) rotateZ(2deg);
+  }
+
+  100% {
+    transform: scale3d(1.1,1.1,1) rotateZ(0deg);
+  }
+}
+
+@keyframes jerkRotate {
+  0% {
+    transform: scale3d(1.1,1.1,1) rotateZ(-3deg);
+  }
+  50% {
+    transform: scale3d(1.1,1.1,1) rotateZ(3deg);
+  }
+  100% {
+    transform: scale3d(1.1,1.1,1) rotateZ(-2deg);
+  }
+} */

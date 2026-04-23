@@ -3,23 +3,14 @@
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { cn } from "@/src/lib/utils";
-import Link from "next/link";
-import { MulticolorH2 } from "@/src/components/ui/MulticolorH2";
 import StepsForm from "../home/stepsform";
+import PackageBookingPaymentModal, {
+  packageThemeFromClass,
+  type PackageBookingSelection,
+} from "@/src/components/packages/PackageBookingPaymentModal";
 
 
 type ThemeClass = "package-card--basic" | "package-card--standard" | "package-card--premium";
-
-function packageCardTopBackground(theme: ThemeClass): string {
-  switch (theme) {
-    case "package-card--basic":
-      return "var(--primary)";
-    case "package-card--standard":
-      return "#cd8f52";
-    case "package-card--premium":
-      return "#67b95c";
-  }
-}
 
 type EventPackage = {
   name: string;
@@ -83,7 +74,7 @@ const TABS = [
   { id: "grand" as const, label: "Extra Large Events" },
 ];
 
-function PackageCard({ pkg }: { pkg: EventPackage }) {
+function PackageCard({ pkg, onBook }: { pkg: EventPackage; onBook: (pkg: EventPackage) => void }) {
   return (
     <div className={cn("package-card", pkg.themeClass)}>
       <div className="package-card-top">
@@ -108,9 +99,9 @@ function PackageCard({ pkg }: { pkg: EventPackage }) {
           </li>
         ))}
       </ul>
-      <Link href="/book-now" type="button" className="btn btn-secondary uppercase">
+      <button type="button" className="btn btn-secondary uppercase" onClick={() => onBook(pkg)}>
         Book this Event
-      </Link>
+      </button>
     </div>
   );
 }
@@ -118,6 +109,15 @@ function PackageCard({ pkg }: { pkg: EventPackage }) {
 export default function PackagesPageTabs() {
   const [stepsOpen, setStepsOpen] = useState(false);
   const [active, setActive] = useState<(typeof TABS)[number]["id"]>("limited");
+  const [bookModal, setBookModal] = useState<PackageBookingSelection | null>(null);
+
+  const openPackageBookModal = (pkg: EventPackage) => {
+    setBookModal({
+      name: pkg.name,
+      price: pkg.price,
+      theme: packageThemeFromClass(pkg.themeClass),
+    });
+  };
 
 
   return (
@@ -161,7 +161,7 @@ export default function PackagesPageTabs() {
           className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
         >
           {LIMITED_PACKAGES.map((pkg) => (
-            <PackageCard key={pkg.name} pkg={pkg} />
+            <PackageCard key={pkg.name} pkg={pkg} onBook={openPackageBookModal} />
           ))}
         </div>
       )}
@@ -174,7 +174,7 @@ export default function PackagesPageTabs() {
           className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"
         >
           {FULL_MENU_PACKAGES.map((pkg) => (
-            <PackageCard key={`full-${pkg.name}`} pkg={pkg} />
+            <PackageCard key={`full-${pkg.name}`} pkg={pkg} onBook={openPackageBookModal} />
           ))}
         </div>
       )}
@@ -229,7 +229,12 @@ export default function PackagesPageTabs() {
           </div>
         </div>
       )}
-     
+
+      <PackageBookingPaymentModal
+        open={bookModal !== null}
+        selection={bookModal}
+        onClose={() => setBookModal(null)}
+      />
     </div>
   );
 }

@@ -105,7 +105,7 @@ export default function BookNowPage() {
                 >
                   EVERY EVENT INCLUDES:
                 </MulticolorH2>
-                <ul className="mt-[24px] list-disc space-y-[12px] text-left text-[14px] font-semibold text-para-color font-dmsans leading-relaxed text-primary   text-[16px]">
+                <ul className="mt-[24px] list-disc space-y-[12px] text-left text-[14px] font-semibold text-para-color leading-relaxed text-primary   text-[16px]">
                   {EVENT_INCLUDES_LINES.map((line) => (
                     <li key={line}>{line}</li>
                   ))}

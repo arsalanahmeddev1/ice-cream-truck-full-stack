@@ -16,43 +16,41 @@ import Coneimg1 from "@/public/images/cone-img-1.png";
 import Coneimg2 from "@/public/images/cone-img-2.png";
 import Coneimg3 from "@/public/images/cone-img-3.png";
 import Coneimg4 from "@/public/images/cone-img-4.png";
-import MilkShakeimg1 from "@/public/images/milk-shake/milk-shake-img-01.png";
-import MilkShakeimg2 from "@/public/images/milk-shake/milk-shake-img-02.png";
-import MilkShakeimg3 from "@/public/images/milk-shake/milk-shake-img-03.png";
-import MilkShakeimg4 from "@/public/images/milk-shake/milk-shake-img-04.png";
-import MilkShakeimg5 from "@/public/images/milk-shake/milk-shake-img-05.png";
-import MilkShakeimg6 from "@/public/images/milk-shake/milk-shake-img-06.png";
-import Sundaesimg1 from "@/public/images/sundas-images/sundaes-img-01.png";
-import Sundaesimg2 from "@/public/images/sundas-images/sundaes-img-02.png";
-import Sundaesimg3 from "@/public/images/sundas-images/sundaes-img-03.png";
-import Sundaesimg4 from "@/public/images/sundas-images/sundaes-img-04.png";
-import Sundaesimg5 from "@/public/images/sundas-images/sundaes-img-05.png";
-import ItalianIceimg1 from "@/public/images/italian-ice-images/italian-ice-blue-01.png";
-import ItalianIceimg2 from "@/public/images/italian-ice-images/italian-ice-blue-02.png";
-import ItalianIceimg3 from "@/public/images/italian-ice-images/italian-ice-blue-03.png";
-import ItalianIceimg4 from "@/public/images/italian-ice-images/italian-ice-blue-04.png";
-import ItalianIceimg5 from "@/public/images/italian-ice-images/italian-ice-blue-05.png";
-import ItalianIceimg6 from "@/public/images/italian-ice-images/italian-ice-blue-06.png";
-import ItalianIceimg7 from "@/public/images/italian-ice-images/italian-ice-blue-07.png";
-import ItalianIceimg8 from "@/public/images/italian-ice-images/italian-ice-blue-08.png";
-import ItalianIceimg9 from "@/public/images/italian-ice-images/italian-ice-blue-09.png";
-import NewConeimg1 from "@/public/images/cone-images/new-cone-img-01.png";
-import NewConeimg2 from "@/public/images/cone-images/new-cone-img-02.png";
-import NewConeimg3 from "@/public/images/cone-images/new-cone-img-03.png";
-import NewConeimg4 from "@/public/images/cone-images/new-cone-img-04.png";
-import NewConeimg5 from "@/public/images/cone-images/new-cone-img-05.png";
-import NewConeimg6 from "@/public/images/cone-images/new-cone-img-06.png";
-import NewConeimg7 from "@/public/images/cone-images/new-cone-img-07.png";
-import NewConeimg8 from "@/public/images/cone-images/new-cone-img-08.png";
-import NewConeimg9 from "@/public/images/cone-images/new-cone-img-09.png";
-import NewConeimg10 from "@/public/images/cone-images/new-cone-img-10.png";
-import NewConeimg11 from "@/public/images/cone-images/new-cone-img-11.png";
-import NewConeimg12 from "@/public/images/cone-images/new-cone-img-12.png";
-import NewConeimg13 from "@/public/images/cone-images/new-cone-img-13.png";
-import NewConeimg14 from "@/public/images/cone-images/new-cone-img-14.png";
-import NewConeimg15 from "@/public/images/cone-images/new-cone-img-15.png";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import MilkShakeimg1 from "@/public/images/milk-shake/01.png";
+import MilkShakeimg2 from "@/public/images/milk-shake/02.png";
+import MilkShakeimg3 from "@/public/images/milk-shake/03.png";
+import MilkShakeimg4 from "@/public/images/milk-shake/04.png";
+import MilkShakeimg5 from "@/public/images/milk-shake/05.png";
+import MilkShakeimg6 from "@/public/images/milk-shake/06.png";
+import Sundaesimg1 from "@/public/images/sundas-images/01.png";
+import Sundaesimg2 from "@/public/images/sundas-images/02.png";
+import Sundaesimg3 from "@/public/images/sundas-images/03.png";
+import Sundaesimg4 from "@/public/images/sundas-images/04.png";
+import Sundaesimg5 from "@/public/images/sundas-images/05.png";
+import ItalianIceimg1 from "@/public/images/italian-ice-images/01.png";
+import ItalianIceimg2 from "@/public/images/italian-ice-images/02.png";
+import ItalianIceimg3 from "@/public/images/italian-ice-images/03.png";
+import ItalianIceimg4 from "@/public/images/italian-ice-images/04.png";
+import NewConeimg1 from "@/public/images/cone-images/01.png";
+import NewConeimg2 from "@/public/images/cone-images/02.png";
+import NewConeimg3 from "@/public/images/cone-images/03.png";
+import NewConeimg4 from "@/public/images/cone-images/04.png";
+import NewConeimg5 from "@/public/images/cone-images/05.png";
+import NewConeimg6 from "@/public/images/cone-images/06.png";
+import NewConeimg7 from "@/public/images/cone-images/07.png";
+import NewConeimg8 from "@/public/images/cone-images/08.png";
+import NewConeimg9 from "@/public/images/cone-images/09.png";
+import NewConeimg10 from "@/public/images/cone-images/10.png";
+import NewConeimg11 from "@/public/images/cone-images/11.png";
+import NewConeimg12 from "@/public/images/cone-images/12.png";
+import NewConeimg13 from "@/public/images/cone-images/13.png";
+import NewConeimg14 from "@/public/images/cone-images/14.png";
+import NewConeimg15 from "@/public/images/cone-images/15.png";
+import novelties01 from "@/public/images/novelties/01.png";
+import novelties02 from "@/public/images/novelties/02.png";
+import novelties03 from "@/public/images/novelties/03.png";
 import { motion } from "framer-motion";
+
 
 export type MenuMode = "limited" | "full" | null;
 
@@ -63,7 +61,6 @@ export function MenuTypeTabs({
   menuMode: MenuMode;
   onSelect: (mode: "limited" | "full") => void;
 }) {
-  const [isOpen, setIsOpen] = useState(true);
   return (
     <div
       className="mt-6 flex w-full flex-col gap-4 sm:flex-row sm:items-stretch sm:justify-center sm:gap-8 md:gap-12"
@@ -117,7 +114,6 @@ export function MenuTypeTabs({
 }
 
 /** Circle hover fill — same palette as Why Choose Us (.wcu-circle-wrapper:hover) */
-/** Circle hover fill — same palette as Why Choose Us (.wcu-circle-wrapper:hover) */
 const products = [
   {
     title: "Cones",
@@ -168,9 +164,6 @@ const products = [
       { name: "italian ice cherry", image: ItalianIceimg2 },
       { name: "Italian Ice Lemon", image: ItalianIceimg3 },
       { name: "italian ice mango", image: ItalianIceimg4 },
-
-      { name: "italian ice mango", image: ItalianIceimg8 },
-      { name: "cartweel vanila", image: ItalianIceimg9 },
     ],
   },
   {
@@ -196,9 +189,9 @@ const products = [
     bgColor: "var(--primary)",
     circleHoverBg: "var(--secondary)",
     subItems: [
-      { name: "banana boat", image: ItalianIceimg5 },
-      { name: "chocolate cup", image: ItalianIceimg6 },
-      { name: "vanila cup", image: ItalianIceimg7 },
+      { name: "novelties 01", image: novelties01 },
+      { name: "novelties 02", image: novelties02 },
+      { name: "novelties 03", image: novelties03 },
     ],
   },
 ];
@@ -240,9 +233,6 @@ const limitedment = [
       { name: "italian ice cherry", image: ItalianIceimg2 },
       { name: "Italian Ice Lemon", image: ItalianIceimg3 },
       { name: "italian ice mango", image: ItalianIceimg4 },
-
-      { name: "italian ice mango", image: ItalianIceimg8 },
-      { name: "cartweel vanila", image: ItalianIceimg9 },
     ],
   },
   {
@@ -252,9 +242,6 @@ const limitedment = [
     bgColor: "var(--primary)",
     circleHoverBg: "var(--secondary)",
     subItems: [
-      { name: "banana boat", image: ItalianIceimg5 },
-      { name: "chocolate cup", image: ItalianIceimg6 },
-      { name: "vanila cup", image: ItalianIceimg7 },
     ],
   },
 ];
@@ -262,13 +249,139 @@ const limitedment = [
 const INITIAL_VISIBLE = 4;
 const LOAD_MORE_STEP = 4;
 
+type MenuCategory = (typeof products)[number];
+
+function CategoryTabRow({
+  categories,
+  selectedIndex,
+  onSelect,
+  getIconInvert,
+  ariaLabel,
+}: {
+  categories: MenuCategory[];
+  selectedIndex: number;
+  onSelect: (index: number) => void;
+  getIconInvert: (index: number) => string;
+  ariaLabel: string;
+}) {
+  return (
+    <div
+      className="mb-4 flex w-full max-w-full flex-nowrap items-stretch justify-start gap-1 overflow-x-auto pb-2 [scrollbar-width:thin] sm:mb-6 sm:justify-center sm:gap-2 md:gap-3"
+      role="tablist"
+      aria-label={ariaLabel}
+    >
+      {categories.map((product, index) => {
+        const isActive = selectedIndex === index;
+        return (
+          <button
+            key={`cat-tab-${product.title}-${index}`}
+            type="button"
+            role="tab"
+            aria-selected={isActive}
+            onClick={() => onSelect(index)}
+            className={`flex min-w-0 shrink-0 justify-center items-center border-1 rounded-xl w-[60px] h-[60px] text-center transition-all ${
+              isActive
+                ? "bg-primary opacity-100 shadow-sm border-transparent"
+                : "opacity-80 hover:opacity-100 border-white/50"
+            }`}
+          >
+            <motion.img
+              src={product.icon.src}
+              alt=""
+              className={`h-8 w-8 object-contain sm:h-10 sm:w-10 ${getIconInvert(index)}`}
+              animate={{ scale: [1, 1.06, 1] }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatDelay: 2,
+              }}
+            />
+            {/* <MulticolorH2
+              className="whitespace-nowrap text-[10px] font-semibold uppercase leading-tight tracking-wide sm:text-xs md:text-sm"
+              sectionBackground={product.bgColor}
+            >
+              {product.title}
+            </MulticolorH2> */}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+function CategoryProductGrid({
+  product,
+  reactKey,
+  visible,
+  onShowMore,
+}: {
+  product: MenuCategory;
+  reactKey: string;
+  visible: number;
+  onShowMore: () => void;
+}) {
+  const total = product.subItems.length;
+  const sliceEnd = Math.min(visible, total);
+  const shown = product.subItems.slice(0, sliceEnd);
+  const hasMore = sliceEnd < total;
+
+  return (
+    <div
+      className="menu-wrapper w-full cursor-default"
+      style={
+        {
+          ["--product-circle-hover-solid" as string]: product.circleHoverBg,
+        } as React.CSSProperties
+      }
+    >
+      <div className="w-full px-4 py-8 sm:px-6 md:px-10 md:py-10 lg:px-12">
+        <div className="mx-auto grid w-full min-w-0 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+          {shown.map((sub, i) => (
+            <div
+              key={`${reactKey}-${sub.name}-${i}`}
+              className="flex flex-col items-center"
+            >
+              <div className="relative w-full max-w-[210px]">
+                <Image
+                  src={sub.image}
+                  alt={sub.name}
+                  className="mb-2.5 object-contain"
+                />
+              </div>
+              {/* <MulticolorH2
+                className="mb-6 text-center font-shine-bubble text-base text-white md:mb-10 md:text-xl"
+                sectionBackground="#e8cfae"
+              >
+                {sub.name}
+              </MulticolorH2> */}
+              <h2>{sub.name}</h2>
+            </div>
+          ))}
+        </div>
+        {hasMore && (
+          <div className="flex justify-center pb-2 pt-6 md:pt-8">
+            <button
+              type="button"
+              className="rounded-full border-2 border-white px-10 py-3 text-sm font-bold uppercase tracking-widest text-white shadow-lg transition-transform hover:scale-[1.03] hover:bg-white/15 active:scale-[0.98] md:px-14 md:text-base"
+              onClick={onShowMore}
+            >
+              See more
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 type ProductSectionProps = {
   menuMode: MenuMode;
 };
 
 const ProductSection = ({ menuMode }: ProductSectionProps) => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [openLimitedIndex, setOpenLimitedIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState(0);
+  const [openLimitedIndex, setOpenLimitedIndex] = useState(0);
   const [visibleByCategory, setVisibleByCategory] = useState<
     Record<number, number>
   >({});
@@ -277,24 +390,11 @@ const ProductSection = ({ menuMode }: ProductSectionProps) => {
   >({});
 
   useEffect(() => {
-    setOpenIndex(null);
-    setOpenLimitedIndex(null);
+    setOpenIndex(0);
+    setOpenLimitedIndex(0);
     setVisibleByCategory({});
     setVisibleLimitedByIndex({});
   }, [menuMode]);
-
-  const toggleAccordion = (index: number) => {
-    if (openIndex === index) {
-      setOpenIndex(null);
-      setVisibleByCategory((prev) => {
-        const next = { ...prev };
-        delete next[index];
-        return next;
-      });
-    } else {
-      setOpenIndex(index);
-    }
-  };
 
   const showMore = (categoryIndex: number, total: number) => {
     setVisibleByCategory((prev) => {
@@ -304,19 +404,6 @@ const ProductSection = ({ menuMode }: ProductSectionProps) => {
         [categoryIndex]: Math.min(current + LOAD_MORE_STEP, total),
       };
     });
-  };
-
-  const toggleLimitedAccordion = (index: number) => {
-    if (openLimitedIndex === index) {
-      setOpenLimitedIndex(null);
-      setVisibleLimitedByIndex((prev) => {
-        const next = { ...prev };
-        delete next[index];
-        return next;
-      });
-    } else {
-      setOpenLimitedIndex(index);
-    }
   };
 
   const showMoreLimited = (categoryIndex: number, total: number) => {
@@ -329,280 +416,61 @@ const ProductSection = ({ menuMode }: ProductSectionProps) => {
     });
   };
 
+  const fullProduct = products[openIndex] ?? products[0];
+  const limitedProduct = limitedment[openLimitedIndex] ?? limitedment[0];
+
   return (
     <div className="mt-8 flex w-full flex-col md:mt-10">
       {menuMode === "limited" ? (
         <div
-          className="w-full max-w-[75%] mx-auto"
+          className="container w-full max-w-full px-4"
           role="tabpanel"
           aria-labelledby="product-tab-limited"
         >
-          {limitedment.map((product, index) => {
-            const isOpen = openLimitedIndex === index;
-            const total = product.subItems.length;
-            const visible = visibleLimitedByIndex[index] ?? INITIAL_VISIBLE;
-            const sliceEnd = Math.min(visible, total);
-            const shown = product.subItems.slice(0, sliceEnd);
-            const hasMore = sliceEnd < total;
-            const isCones = product.title === "Cones";
-
-            return (
-              <div
-                key={`limited-cat-${product.title}`}
-                className="relative w-full mx-auto mb-4 rounded-[10px] cursor-pointer overflow-hidden border-b border-black/10 transition-all duration-700 ease-in-out last:border-0"
-                style={
-                  {
-                    backgroundColor: product.bgColor,
-                    ["--product-circle-hover-solid" as string]:
-                      product.circleHoverBg,
-                  } as React.CSSProperties
-                }
-                onClick={(e) => {
-                  if ((e.target as HTMLElement).tagName !== "BUTTON") {
-                    toggleLimitedAccordion(index);
-                  }
-                }}
-              >
-                <div className="flex w-full p-[5px] justify-between transition-opacity hover:bg-white/5">
-                  <div
-                    className={`product-sec-circle-wrapper group w-full flex  items-center justify-between rounded-full   transition-all duration-500 ease-in-out ${
-                      isOpen ? "" : ""
-                    }`}
-                  >
-                    <div className="relative flex items-center justify-between w-full  transition-transform duration-500">
-                      <div className="flex items-center justify-between">
-                        <motion.img
-                          src={product.icon.src}
-                          alt={product.title}
-                          className={`object-contain mx-auto h-[40px] w-[40px] ${
-                            isCones ? "invert-0" : "invert-[1]"
-                          }`}
-                          animate={{
-                            scale: [1, 1.06, 1], // breathing only
-                          }}
-                          transition={{
-                            duration: 2,
-                            ease: "easeInOut",
-                            repeat: Infinity,
-                            repeatDelay: 2,
-                          }}
-                        />
-                      </div>
-                      <MulticolorH2
-                        className="text-center text-[13px] font-semibold uppercase tracking-widest text-white drop-shadow-sm md:text-[20px]"
-                        sectionBackground={product.bgColor}
-                      >
-                        {product.title}
-                      </MulticolorH2>
-                      <div
-                        className="!bg-white cursor-pointer text-primary w-[30px] h-[30px] flex items-center justify-center rounded-full  shrink-0  !hover:bg-gray-100 transition-colors shadow-sm"
-                        aria-label="Close allergy key"
-                      >
-                        {isOpen ? (
-                          <ChevronDown className="w-4 h-4" strokeWidth={3} />
-                        ) : (
-                          <ChevronUp className="w-4 h-4" strokeWidth={3} />
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  className={`w-full menu-wrapper cursor-default transition-all duration-700 ease-in-out ${
-                    isOpen
-                      ? "opacity-100 pb-20"
-                      : "max-h-0 opacity-0 pb-0"
-                  }`}
-                >
-                  <div className="container  mx-auto mt-10 px-6 md:px-12 lg:px-24">
-                    <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-3 md:gap-10">
-                      {shown.map((sub, i) => (
-                        <div
-                          key={`limited-${product.title}-${sub.name}-${i}`}
-                          className="flex flex-col items-center"
-                        >
-                          <div className="relative max-w-[210px]">
-                            <Image
-                              src={sub.image}
-                              alt={sub.name}
-                              className="object-contain mb-[10px]"
-                            />
-                          </div>
-                          <div className="flex flex-col gap-2 pl-2">
-                          <MulticolorH2
-                        id="book-your-event-heading"
-                        className="text-white mb-[50px] font-shine-bubble text-[20px]"
-                        sectionBackground="#e8cfae"
-                    >
-                              {sub.name}
-                    </MulticolorH2>
-                            {/* <h4 className="font-shine-bubble text-[20px] font-bold leading-none text-white md:text-[24px]">
-                              {sub.name}
-                            </h4> */}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                    {hasMore && (
-                      <div className="flex justify-center pb-4 pt-10">
-                        <button
-                          type="button"
-                          className="rounded-full border-2 border-black px-10 py-3 text-sm font-bold uppercase tracking-widest text-black shadow-lg transition-transform hover:scale-[1.03] hover:bg-white/15 active:scale-[0.98] md:px-14 md:text-base"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            showMoreLimited(index, total);
-                          }}
-                        >
-                          See more
-                        </button>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          <CategoryTabRow
+            categories={limitedment}
+            selectedIndex={openLimitedIndex}
+            onSelect={setOpenLimitedIndex}
+            getIconInvert={(i) =>
+              limitedment[i]?.title === "Cones" ? "invert-0" : "invert-[1]"
+            }
+            ariaLabel="Limited menu categories"
+          />
+          <CategoryProductGrid
+            product={limitedProduct}
+            reactKey={`limited-${openLimitedIndex}`}
+            visible={
+              visibleLimitedByIndex[openLimitedIndex] ?? INITIAL_VISIBLE
+            }
+            onShowMore={() =>
+              showMoreLimited(
+                openLimitedIndex,
+                limitedProduct.subItems.length
+              )
+            }
+          />
         </div>
       ) : menuMode === "full" ? (
         <div
-          className="max-w-[75%] mx-auto "
+          className="container w-full max-w-full px-4"
           role="tabpanel"
           aria-labelledby="product-tab-full"
         >
-          {products.map((product, index) => {
-            const isOpen = openIndex === index;
-            return (
-              <div
-                key={index}
-                className="w-full rounded-[10px] mb-4 transition-all duration-700 ease-in-out cursor-pointer overflow-hidden border-b border-black/10 last:border-0 relative"
-                style={
-                  {
-                    backgroundColor: product.bgColor,
-                    ["--product-circle-hover-solid" as string]:
-                      product.circleHoverBg,
-                  } as React.CSSProperties
-                }
-                onClick={(e) => {
-                  // Only toggle if we didn't click the "Try Now" button
-                  if ((e.target as HTMLElement).tagName !== "BUTTON") {
-                    toggleAccordion(index);
-                  }
-                }}
-              >
-                {/* Header / Closed State */}
-                <div className="flex w-full p-[5px] justify-between transition-opacity hover:bg-white/5">
-                  <div
-                    className={`product-sec-circle-wrapper group w-full flex  items-center justify-between rounded-full   transition-all duration-500 ease-in-out ${
-                      isOpen ? "" : ""
-                    }`}
-                  >
-                    <div className="relative flex items-center justify-between w-full  transition-transform duration-500">
-                      <div className="flex items-center justify-between">
-                      <motion.img
-                          src={product.icon.src}
-                          alt={product.title}
-                          className={`object-contain mx-auto h-[40px] w-[40px] ${
-                            index === 0 ? "invert-0" : "invert-[1]"
-                          }`}
-                          animate={{
-                            scale: [1, 1.06, 1], // breathing only
-                          }}
-                          transition={{
-                            duration: 2,
-                            ease: "easeInOut",
-                            repeat: Infinity,
-                            repeatDelay: 2,
-                          }}
-                        />
-                      </div>
-                      <MulticolorH2
-                        className="text-white font-semibold uppercase tracking-widest drop-shadow-sm text-[13px] md:text-[20px]"
-                        sectionBackground={product.bgColor}
-                      >
-                        {product.title}
-                      </MulticolorH2>
-                      <div
-                        className="!bg-white cursor-pointer text-primary w-[30px] h-[30px] flex items-center justify-center rounded-full  shrink-0  !hover:bg-gray-100 transition-colors shadow-sm"
-                        aria-label="Close allergy key"
-                      >
-                        {isOpen ? (
-                          <ChevronDown className="w-4 h-4" strokeWidth={3} />
-                        ) : (
-                          <ChevronUp className="w-4 h-4" strokeWidth={3} />
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Expanded Content */}
-                <div
-                  className={`w-full menu-wrapper transition-all duration-700 ease-in-out cursor-default ${
-                    isOpen
-                      ? "max-h-[1500px] opacity-100 pb-20"
-                      : "max-h-0 opacity-0 pb-0"
-                  }`}
-                >
-                  <div className="container mx-auto mt-10">
-                    {(() => {
-                      const total = product.subItems.length;
-                      const visible =
-                        visibleByCategory[index] ?? INITIAL_VISIBLE;
-                      const sliceEnd = Math.min(visible, total);
-                      const shown = product.subItems.slice(0, sliceEnd);
-                      const hasMore = sliceEnd < total;
-
-                      return (
-                        <>
-                          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-12 lg:px-24">
-                            {shown.map((sub, i) => (
-                              <div
-                                key={`${sub.name}-${i}`}
-                                className="flex flex-col items-center"
-                              >
-                                <div className="relative max-w-[210px]">
-                                  <Image
-                                    src={sub.image}
-                                    alt={sub.name}
-                                    className="object-contain mb-[10px]"
-                                  />
-                                </div>
-                                <div className="flex flex-col gap-2">
-                                <MulticolorH2
-                        id="book-your-event-heading"
-                        className="text-white mb-[50px] font-shine-bubble text-[20px]"
-                        sectionBackground="#e8cfae"
-                    >
-                              {sub.name}
-                    </MulticolorH2>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-
-                          {hasMore && (
-                            <div className="flex justify-center px-6 pb-4 pt-10 md:px-12">
-                              <button
-                                type="button"
-                                className="rounded-full border-2 border-black px-10 py-3 text-sm font-bold uppercase tracking-widest text-black shadow-lg transition-transform hover:scale-[1.03] hover:bg-white/15 active:scale-[0.98] md:px-14 md:text-base"
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  showMore(index, total);
-                                }}
-                              >
-                                See more
-                              </button>
-                            </div>
-                          )}
-                        </>
-                      );
-                    })()}
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          <CategoryTabRow
+            categories={products}
+            selectedIndex={openIndex}
+            onSelect={setOpenIndex}
+            getIconInvert={(i) => (i === 0 ? "invert-0" : "invert-[1]")}
+            ariaLabel="Full menu categories"
+          />
+          <CategoryProductGrid
+            product={fullProduct}
+            reactKey={`full-${openIndex}`}
+            visible={visibleByCategory[openIndex] ?? INITIAL_VISIBLE}
+            onShowMore={() =>
+              showMore(openIndex, fullProduct.subItems.length)
+            }
+          />
         </div>
       ) : null}
     </div>

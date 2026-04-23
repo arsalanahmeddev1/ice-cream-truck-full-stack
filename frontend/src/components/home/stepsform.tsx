@@ -980,7 +980,7 @@ export default function StepsForm({ open, onClose }: StepsFormProps) {
 
   return (
     <div
-      className="steps-form-modal fixed inset-0 z-[200] flex min-h-dvh flex-col bg-white font-dmsans text-para-color "
+      className="steps-form-modal fixed inset-0 z-[200] flex min-h-dvh flex-col bg-white text-para-color "
       role="dialog"
       aria-modal="true"
       aria-labelledby={
