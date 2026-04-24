@@ -45,7 +45,7 @@
   --secondary: #c13194;
   --accent: #60ae74;
   --text-on-brand: #ffffff;
-  --para-color: #1b66d0;
+  --para-color: #1b66d0x;
   --font-dmsans: 'DM Sans', sans-serif;
 
   /* Product category circle hover fill — set per row via --product-circle-hover-solid (Why Choose Us palette) */
