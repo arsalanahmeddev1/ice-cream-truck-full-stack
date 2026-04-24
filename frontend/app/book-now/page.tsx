@@ -25,10 +25,10 @@ const EVENT_INCLUDES_LINES = [
 export default function BookNowPage() {
   return (
     <section className="packages-page-sec relative">
-     
-      <InnerPageBanner title ="Book Now" />
+
+      <InnerPageBanner title="Book Now" />
       <SprinkleParticles seed={2026} />
-       {/* <Booknowpageballs seed={2027} count={26} /> */}
+      {/* <Booknowpageballs seed={2027} count={26} /> */}
       <div className="relative z-[2] px-[15px] py-[100px]">
         <div className="mx-auto flex w-full max-w-[1200px] flex-col px-0">
           <div className="grid w-full grid-cols-1 items-start gap-[40px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_auto] lg:items-center lg:gap-[28px] xl:gap-[40px]">
@@ -98,7 +98,7 @@ export default function BookNowPage() {
             </div>
 
             <div className="mx-auto w-full min-w-0 max-w-[576px] lg:mx-0 lg:max-w-none">
-              <div className="rounded-[24px] border-[3px] border-[var(--primary)] bg-white p-[24px] shadow-sm sm:p-[32px] md:p-[40px]">
+              {/* <div className="rounded-[24px] border-[3px] border-[var(--primary)] bg-white p-[24px] shadow-sm sm:p-[32px] md:p-[40px]">
                 <MulticolorH2
                   className="font-shine-bubble text-[23px] uppercase leading-snug tracking-wide text-[var(--secondary)]"
                   sectionBackground="#ffffff"
@@ -110,6 +110,36 @@ export default function BookNowPage() {
                     <li key={line}>{line}</li>
                   ))}
                 </ul>
+              </div> */}
+              <div className="card animated-card">
+                <div className="content">
+                  <div className="back">
+                    <div className="back-content">
+                      <MulticolorH2
+                        className="font-shine-bubble text-[23px] uppercase leading-snug tracking-wide text-[var(--secondary)]"
+                        sectionBackground="#ffffff"
+                      >
+                        EVERY EVENT INCLUDES:
+                      </MulticolorH2>
+                      <ul className="mt-[24px] list-disc space-y-[12px] text-left text-[14px] font-semibold text-para-color leading-relaxed text-primary   text-[16px]">
+                        {EVENT_INCLUDES_LINES.map((line) => (
+                          <li key={line}>{line}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="front">
+
+                    <div className="img">
+                      <div className="circle">
+                      </div>
+                      <div className="circle" id="right">
+                      </div>
+                      <div className="circle" id="bottom">
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -130,7 +160,7 @@ export default function BookNowPage() {
 
           <BookNowSocialRow className="mt-[40px] w-full sm:mt-[48px]" />
           <div>
-             <img src="/images/myicecreamtruck-logo.png" className="absolute bottom-0 left-[190px]" width={500} height={500} alt="" />
+            <img src="/images/myicecreamtruck-logo.png" className="absolute bottom-0 left-[190px]" width={500} height={500} alt="" />
           </div>
         </div>
       </div>

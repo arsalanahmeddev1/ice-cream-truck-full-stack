@@ -126,58 +126,58 @@ export default function AboutSec() {
               Since 1998, My Ice Cream Truck has been proudly serving communities with a timeless ice cream truck experience built on quality, reliability, and tradition. What started as a single neighborhood truck has grown into a trusted multi-unit operation, providing professional ice cream catering services for schools, private parties, corporate events, weddings, and community celebrations.
             </p>
             <p className="text-[16px] pb-[30px] text-white ">
-            We take pride in preserving the nostalgic charm of the classic ice cream truck while delivering a seamless and dependable service that event planners, PTOs, and organizations can count on. Our team is fully licensed, insured, and committed to creating memorable experiences through friendly service and premium frozen treats.
+              We take pride in preserving the nostalgic charm of the classic ice cream truck while delivering a seamless and dependable service that event planners, PTOs, and organizations can count on. Our team is fully licensed, insured, and committed to creating memorable experiences through friendly service and premium frozen treats.
             </p>
             <button
               type="button"
               className="btn btn-primary uppercase packages-page-tabs__btn "
-   
+
             >
               <span className="packages-page-tabs__btn__label">Learn MOre</span>
             </button>
+            
             {/* <button className="animated-btn">
                 Learn More
             </button> */}
           </div>
           <div className="about-sec-right">
-              {/* <div className="about-sec-md-card">
+            {/* <div className="about-sec-md-card">
                 <p>
                 For over two decades, our mission has remained the same to bring people together with the joy of great ice cream and exceptional service at every event we attend.
                 </p>
               </div> */}
-              <div className="about-sec-md-card">
-                {/* <img src={Contetextimage.src} alt="" className="w-full h-full object-cover" width={500} height={500} /> */}
-                <motion.img
-                  src={Contetextimage.src}
-                  alt="banner"
-                  className="w-full h-full object-cover"
-                  width={500} height={500}
-                  animate={{
-                    scale: [1, 1.05, 1],   // 👈 zoom in → zoom out
-                  }}
-                  
-                  transition={{
-                    duration: 2,           // slow smooth breathing
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    repeatDelay: 2,        // 👈 har 2 sec baad pause
-                  }}
-                />
-              </div>
-              <div className="absolute bottom-[140px] max-w-[470px]  right-0 ">
+            <div className="about-sec-md-card">
+              {/* <img src={Contetextimage.src} alt="" className="w-full h-full object-cover" width={500} height={500} /> */}
+              <motion.img
+                src={Contetextimage.src}
+                alt="banner"
+                className="w-full h-full object-cover"
+                width={500} height={500}
+                animate={{
+                  scale: [1, 1.05, 1],   // 👈 zoom in → zoom out
+                }}
+
+                transition={{
+                  duration: 2,           // slow smooth breathing
+                  ease: "easeInOut",
+                  repeat: Infinity,
+                  repeatDelay: 2,        // 👈 har 2 sec baad pause
+                }}
+              />
+            </div>
+            <div className="absolute bottom-[140px] max-w-[470px]  right-0 ">
               <img src={aboutSecRight.src} alt="" className="" width={700} height={700} />
               <div className="vehicle-light-wrapper ">
-                  <img src="/images/light-shape-top.png" alt="" className=" vehicle-light-top absolute top-[160px]  left-[-1px] rotate-[-15deg]" width={30} height={30} />
-                  <img src="/images/light-shape-center.png" alt="" className="vehicle-light-center absolute top-[170px] left-[-90px]" width={80} height={80} />
-                  {/* add key frame infine animation with tailwind top to bottom*/}
+                <img src="/images/light-shape-top.png" alt="" className=" vehicle-light-top absolute top-[160px]  left-[-1px] rotate-[-15deg]" width={30} height={30} />
+                <img src="/images/light-shape-center.png" alt="" className="vehicle-light-center absolute top-[170px] left-[-90px]" width={80} height={80} />
+                {/* add key frame infine animation with tailwind top to bottom*/}
 
-                  <img src="/images/light-shape-bottom.png" alt="" className="vehicle-light-bottom absolute top-[250px] left-[-90px]" width={50} height={50} />
+                <img src="/images/light-shape-bottom.png" alt="" className="vehicle-light-bottom absolute top-[250px] left-[-90px]" width={50} height={50} />
               </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>
-
     </section>
   );
 }

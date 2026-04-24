@@ -37,15 +37,11 @@ export default function TextDrop({ onComplete }: TextDropProps) {
       className="text-white text-center text-[26px]"
     >
       <motion.span variants={item} className="block">
-        We give people
+      Make MY ice cream truck,
       </motion.span>
 
       <motion.span variants={item} className="block">
-        something
-      </motion.span>
-
-      <motion.span variants={item} className="block">
-        to look forward to.
+      YOUR ice cream truck
       </motion.span>
     </motion.div>
   );
