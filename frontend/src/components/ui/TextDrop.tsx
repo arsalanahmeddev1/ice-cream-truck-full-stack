@@ -22,7 +22,12 @@ const item = {
   },
 };
 
-export default function TextDrop({ onComplete }) {
+type TextDropProps = {
+  /** Fires when the container’s variant animation to `show` has finished (after stagger). */
+  onComplete?: () => void;
+};
+
+export default function TextDrop({ onComplete }: TextDropProps) {
   return (
     <motion.div
       variants={container}
