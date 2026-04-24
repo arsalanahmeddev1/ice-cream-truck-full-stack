@@ -45,7 +45,7 @@
   --secondary: #c13194;
   --accent: #60ae74;
   --text-on-brand: #ffffff;
-  --para-color: #6e6f89;
+  --para-color: #1b66d0;
   --font-dmsans: 'DM Sans', sans-serif;
 
   /* Product category circle hover fill — set per row via --product-circle-hover-solid (Why Choose Us palette) */
@@ -724,7 +724,7 @@ p {
   overflow: hidden;
 }
 
-.back {
+.animated-card .back {
   width: 100%;
   height: 100%;
   justify-content: center;
@@ -733,7 +733,7 @@ p {
   overflow: hidden;
 }
 
-.back::before {
+.animated-card .back::before {
   position: absolute;
   content: ' ';
   display: block;
@@ -742,8 +742,8 @@ p {
   background-color: var(--secondary);
   animation: rotation_481 5000ms infinite linear;
 }
-
-.back-content {
+ 
+.animated-card .back-content {
   position: absolute;
   width: 99%;
   height: 99%;
@@ -758,6 +758,9 @@ p {
   padding: 30px;
 }
 
+/* .btn-primary {
+  animation: btn-primary-animation 1s steps(4);
+} */
 /* .card:hover .content {
   transform: rotateY(180deg);
 } */
@@ -870,3 +873,16 @@ p {
     transform: translateY(0px);
   }
 }
+.about-sec::before {
+  background-image: url('/images/cloud-colored-top.png') !important;
+}
+.why-choose-us:before {
+  background-image: url('/images/cloud-colored-bottom.png') !important;
+}
+.premium-ice-cream-sec {
+  background-color: #f3e6d4;
+}
+p.text-para-color {
+  color: var(--color-primary);
+}
+/* responsive */

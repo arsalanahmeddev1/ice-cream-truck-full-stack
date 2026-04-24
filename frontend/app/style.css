@@ -880,7 +880,7 @@
 
 .chill-clean-para {
     /* color: #777777; */
-    color: var(--para-color);
+    color: var(--primary);
     font-size: 18px;
     text-align: center;
 }
@@ -898,7 +898,7 @@
 
 .chill-clean-sm-para {
     font-size: 15px;
-    color: var(--text-muted);
+    color: var(--primary);
     font-weight: 500;
     max-width: 210px;
     margin: 0 auto;
@@ -1132,6 +1132,95 @@
 .menu-wrapper {
     /* background-color: #fff; */
 }
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: var(--secondary);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #2294F2, #80C9EE, #C13195, #E7A66D);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/* .testing-btn {
+    background: linear-gradient(45deg, #1B66D0, #93CFA4, #C13194, #E7A66D, #80C9EE);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    animation: moveGradient 1s infinite linear;
+  }
+  
+  @keyframes moveGradient {
+    0% {
+      background: linear-gradient(45deg, #1B66D0, #93CFA4, #C13194, #E7A66D, #80C9EE);
+    }
+    25% {
+      background: linear-gradient(45deg, #93CFA4, #C13194, #E7A66D, #80C9EE, #1B66D0);
+    }
+    50% {
+      background: linear-gradient(45deg, #C13194, #E7A66D, #80C9EE, #1B66D0, #93CFA4);
+    }
+    75% {
+      background: linear-gradient(45deg, #E7A66D, #80C9EE, #1B66D0, #93CFA4, #C13194);
+    }
+    100% {
+      background: linear-gradient(45deg, #80C9EE, #1B66D0, #93CFA4, #C13194, #E7A66D);
+    }
+  } */
 /* responsive */
 
 

@@ -8,6 +8,8 @@ import uShap from "@/public/images/u-shape.svg";
 import shield from "@/public/images/shield.png";
 import { useRouter } from 'next/navigation';
 import { MulticolorH2 } from "@/src/components/ui/MulticolorH2";
+import AnimatedBtn from "@/src/components/ui/AnimatedBtn";
+import { Link } from "lucide-react";
 
 /** Deep smile arc (U-shaped): deeper dip via lower control point + slightly higher endpoints. */
 const ARC_PATH = "M 120 50 Q 400 380 650 50";
@@ -163,6 +165,8 @@ export default function ChillClean() {
                 <button onClick={() => router.push("/alergy-info")} className="packages-page-tabs__btn btn bg-[#60AE74] !text-white hover:bg-secondary ">
                    Sweet & Safe Info
                 </button>
+                    {/* <AnimatedBtn type="button" onClick={() => router.push("/alergy-info")}>Sweet & Safe Info</AnimatedBtn> */}
+                {/* <button className="testing-btn">Learn More</button> */}
             </div>
             {/* </div> */}
         </section>

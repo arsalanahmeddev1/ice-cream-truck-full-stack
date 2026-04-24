@@ -8,6 +8,7 @@ import PackageBookingPaymentModal, {
   packageThemeFromClass,
   type PackageBookingSelection,
 } from "@/src/components/packages/PackageBookingPaymentModal";
+import AnimatedBtn from "../ui/AnimatedBtn";
 
 
 type PackageItem = {
@@ -105,6 +106,7 @@ export default function Packages() {
                             >
                                 BOOK YOUR EVENT
                             </button>
+                            
                         </div>
                     ))}
                 </div>
@@ -117,6 +119,11 @@ export default function Packages() {
                     >
                         BOOK YOUR XL EVENT
                     </button>
+
+                    {/* <AnimatedBtn type="button"
+                            onClick={() => setStepsOpen(true)}
+                            >BOOK YOUR XL EVENTNT</AnimatedBtn> */}
+                    
                 </div>
                 <StepsForm open={stepsOpen} onClose={() => setStepsOpen(false)} />
                 <PackageBookingPaymentModal

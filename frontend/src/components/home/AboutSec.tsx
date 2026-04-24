@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import AnimatedBtn from "@/src/components/ui/AnimatedBtn";
 import aboutSecRight from "@/public/images/truck.png";
 import { SprinkleParticles } from "../ui/SprinkleParticles";
 import { MulticolorH2 } from "@/src/components/ui/MulticolorH2";
@@ -135,7 +135,8 @@ export default function AboutSec() {
             >
               <span className="packages-page-tabs__btn__label">Learn MOre</span>
             </button>
-            
+            {/* <AnimatedBtn type="button">Learn More</AnimatedBtn> */}
+            {/* <button className="glow-on-hover" type="button">Learn More</button> */}
             {/* <button className="animated-btn">
                 Learn More
             </button> */}
