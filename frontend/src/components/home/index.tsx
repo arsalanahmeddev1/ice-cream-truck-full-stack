@@ -122,7 +122,7 @@ export default function HomeComponent() {
                 height={32}
                 className="h-6 w-auto max-w-[140px] object-contain md:h-7 md:max-w-[180px]"
               />
-              <span className="text-[22px] font-bold leading-none tracking-tight text-para-color md:text-[28px] ">
+              <span className="text-[22px] font-bold leading-none tracking-tight text-primary md:text-[28px] ">
               4.9+
               </span>
             </div>
